@@ -71,7 +71,47 @@ console.log(`The result is: ${result}`)
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(mixedArr) {
+  if(mixedArr.length === 0){
+    return 0;
+  }
+  
+  let result = 0;
+  let numbersSum = 0;
+  let stringSum = 0;
+  let booleansSum = 0;
+
+  for (let i = 0; i < mixedArr.length; i++){
+    if (typeof mixedArr[i] == "boolean") {
+      // console.log(mixedArr[i]);
+      booleansSum += mixedArr[i];
+      // console.log(booleansSum);
+    }
+    if (typeof mixedArr[i] === "number") {
+      // console.log(mixedArr[i]);
+      numbersSum += mixedArr[i];
+      // console.log(numbersSum);
+    }
+    if (typeof mixedArr[i] === "string") {
+      // console.log(mixedArr[i]);
+      stringSum += mixedArr[i].length;
+      // console.log(stringSum);
+    }
+    if (typeof mixedArr[i] === ("object" || "array")) {
+      // console.log(mixedArr[i]);
+      throw new Error("mixedArr only accepts booleans, strings and/or numbers data types.");
+    }
+    // console.log(`booleanSum = ${booleansSum}, numberSum = ${numbersSum}, stringSum = ${stringSum}`);
+    result = booleansSum + numbersSum + stringSum;
+    // console.log(result);
+  }
+  return result;
+}
+
+// const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+const mixedArr = [6, 12, 'miami', 1, ['el1', 'el2', 'el3'], true, 'barca', '200', 'lisboa', 8, 10];
+console.log(sum(mixedArr));
+// should return: 57
 
 
 
