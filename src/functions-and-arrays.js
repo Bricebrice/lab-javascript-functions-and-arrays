@@ -1,12 +1,52 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(a, b) {
+  if (a > b){
+    // console.log(`${a} is bigger than ${b}`);
+    return a;
+  }
+  else if (a < b){
+    // console.log(`${b} is bigger than ${a}`);
+    return b;
+  }
+  else {
+    // console.log(`${a} is equal to ${b}`);
+    return a,b;
+  }
+}
+maxOfTwoNumbers(1,2);
 
 
 
 // Iteration #2: Find longest word
-const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(words) {
+  // declare longestWord at position 0 = 'mystery'
+  let longestWord = words[0];
+
+  // Check if array is empty, no need for loop
+  if(words.length === 0){
+    console.log(`The array is empty`);
+    return null;
+  }
+
+  // loop over words, start at position 1 = 'brother'
+  for (let i = 1; i < words.length; i++) {
+    // console.log(words[i]);
+    // if words at position 1 (then 2, 3,...) are longer than longestWord
+    if (words[i].length > longestWord.length) {
+      // update longestWord
+      longestWord = words[i];
+      // console.log(`${words[i].length} is longer than ${longestWord.length}`);
+    }
+  }
+  return longestWord;
+}
+
+// const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+const words = [];
+console.log(`The longest word is: ${findLongestWord(words)}`);
+
+
 
 
 
