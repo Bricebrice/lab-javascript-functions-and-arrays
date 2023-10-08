@@ -108,8 +108,8 @@ function sum(mixedArr) {
   return result;
 }
 
-// const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
-const mixedArr = [6, 12, 'miami', 1, ['el1', 'el2', 'el3'], true, 'barca', '200', 'lisboa', 8, 10];
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+// const mixedArr = [6, 12, 'miami', 1, ['el1', 'el2', 'el3'], true, 'barca', '200', 'lisboa', 8, 10];
 console.log(sum(mixedArr));
 // should return: 57
 
@@ -119,7 +119,13 @@ console.log(sum(mixedArr));
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbersAvg) {
+  if (numbersAvg.length === 0){
+    return null;
+  }
+  return sumNumbers(numbersAvg)/numbersAvg.length;
+}
+console.log(`Average (${averageNumbers(numbersAvg)}) is equal to sum (${sumNumbers(numbersAvg)}) divided by number of elements (${numbersAvg.length}).`);
 
 
 // Level 2: Array of strings
