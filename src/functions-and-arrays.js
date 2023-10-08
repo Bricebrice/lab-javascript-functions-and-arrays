@@ -132,6 +132,9 @@ console.log(`Average (${averageNumbers(numbersAvg)}) is equal to sum (${sumNumbe
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
 function averageWordLength(wordsArr) {
+  if (wordsArr.length === 0){
+    return null;
+  }
   return sum(wordsArr)/wordsArr.length;
 }
 console.log(`Average (${averageWordLength(wordsArr)}) is equal to sum (${sum(wordsArr)}) divided by number of elements (${wordsArr.length}).`);
