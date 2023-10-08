@@ -166,8 +166,24 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(wordsUnique) {
 
+  let newList = [];
+
+  if (wordsUnique.length === 0){
+    return null;
+  }  
+  wordsUnique.forEach(function(element){
+    console.log(`${element}`);
+    // if element don't exist in newList, then value is -1, otherwise >= 0
+    if (newList.indexOf(element) === -1){
+      newList.push(element);
+     }
+  });
+  return newList;
+}
+
+console.log(uniquifyArray(wordsUnique));
 
 
 // Iteration #6: Find elements
