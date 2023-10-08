@@ -140,7 +140,16 @@ function averageWordLength(wordsArr) {
 console.log(`Average (${averageWordLength(wordsArr)}) is equal to sum (${sum(wordsArr)}) divided by number of elements (${wordsArr.length}).`);
 
 // Bonus - Iteration #4.1
-function avg() {}
+// had to rename mixedArr to mixedArray as already existingin another exercise
+const mixedArray = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10]; // should return: 5.7
+
+function avg(mixedArray) {
+  if (mixedArray.length === 0){
+    return null;
+  }
+  return sum(mixedArray)/mixedArray.length;
+}
+console.log(avg(mixedArray));
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
