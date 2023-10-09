@@ -220,14 +220,15 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
-const wordToSearch = 'machine';
-let wordOccurence = 0;
+const wordToSearch = 'matter';
+// let wordOccurence = 0;
 
 function howManyTimes(wordsCount, wordToSearch) {
   if (wordsCount.length === 0){
     return 0;
   }
-  
+  // moved to the function so reset happens inside the function itself.
+  let wordOccurence = 0;
   for (let i = 0; i < wordsCount.length; i++){
     if (wordsCount[i] === wordToSearch){
       wordOccurence += 1;
