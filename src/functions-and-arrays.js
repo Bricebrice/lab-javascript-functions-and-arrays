@@ -199,10 +199,9 @@ function doesWordExist(wordsFind, wordSearch) {
     if (wordsFind[i] === wordSearch){
       return true;
     }
-    else {
-      return false;
-    }
   }
+  // if loop ends without returning true, then it's false
+  return false;
 }
 console.log(doesWordExist(wordsFind, wordSearch));
 
