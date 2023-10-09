@@ -220,9 +220,24 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+const wordToSearch = 'machine';
+let wordOccurence = 0;
 
-function howManyTimes() {}
+function howManyTimes(wordsCount, wordToSearch) {
+  if (wordsCount.length === 0){
+    return 0;
+  }
+  
+  for (let i = 0; i < wordsCount.length; i++){
+    if (wordsCount[i] === wordToSearch){
+      wordOccurence += 1;
+      // console.log(wordOccurence);
+    }
+  }
+  return wordOccurence;
+}
 
+console.log(`The word "${wordToSearch}" appears ${howManyTimes(wordsCount, wordToSearch)} times`);
 
 
 // Iteration #8: Bonus
